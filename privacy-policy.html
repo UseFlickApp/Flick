@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Flick</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 16px; line-height: 1.7; color: #1a1a2e;
+      background: #f8f9fa; padding: 40px 20px 80px;
+    }
+    .container { max-width: 700px; margin: 0 auto; background: #fff; border-radius: 12px; padding: 48px 52px; box-shadow: 0 2px 20px rgba(0,0,0,0.07); }
+    .logo { display: flex; align-items: center; gap: 10px; margin-bottom: 36px; }
+    .logo-mark { width: 30px; height: 30px; background: #161B22; border-radius: 7px; border: 1px solid #30363D; display: flex; align-items: center; justify-content: center; flex-shrink: 0; position: relative; } .logo-mark::after { content: ""; position: absolute; top: 5px; right: 5px; width: 6px; height: 6px; background: #09B98A; border-radius: 50%; }
+    .logo-name { font-size: 17px; font-weight: 700; color: #0D1117; }
+    h1 { font-size: 26px; font-weight: 700; color: #0D1117; margin-bottom: 8px; letter-spacing: -0.3px; }
+    .meta { font-size: 13px; color: #6B7280; margin-bottom: 36px; }
+    h2 { font-size: 16px; font-weight: 700; color: #0D1117; margin-top: 32px; margin-bottom: 10px; }
+    p { color: #374151; margin-bottom: 14px; }
+    ul { padding-left: 22px; margin-bottom: 14px; color: #374151; }
+    li { margin-bottom: 6px; }
+    .highlight { background: #F0FDF9; border-left: 3px solid #09B98A; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 20px 0; }
+    .highlight p { margin: 0; color: #065F46; font-weight: 500; }
+    a { color: #09B98A; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: none; border-top: 1px solid #E5E7EB; margin: 32px 0; }
+    @media (max-width: 600px) { .container { padding: 28px 22px; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="logo">
+      <div class="logo-mark">
+        <svg width="14" height="14" viewBox="0 0 12 12" fill="none">
+          <path d="M2 6l3 3 5-5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <span class="logo-name">Flick</span>
+    </div>
+
+    <h1>Privacy Policy</h1>
+    <p class="meta">Last updated: 27 March 2026 &nbsp;·&nbsp; Version 1.2.0</p>
+
+    <div class="highlight">
+      <p>The short version: Flick does not collect, transmit, or store any of your personal data on any external server. Everything stays on your device.</p>
+    </div>
+
+    <h2>1. What we collect</h2>
+    <p>Flick collects <strong>no personal data</strong>. The extension does not ask for your name, email address, phone number, or any personally identifying information.</p>
+
+    <h2>2. What stays on your device</h2>
+    <p>The following data is stored locally in your browser using <code>chrome.storage.local</code> and never leaves your device:</p>
+    <ul>
+      <li><strong>Your Vinted session token and CSRF token</strong> — read from your existing browser session to make API calls on your behalf. These are never transmitted anywhere other than Vinted's own servers.</li>
+      <li><strong>Your Vinted user ID</strong> — used to fetch your wardrobe listings.</li>
+      <li><strong>A log of sent offers</strong> — so the extension can show which likers have already received an offer. Stored as item ID / user ID pairs only.</li>
+      <li><strong>Your in-progress repost run and offer run logs</strong> — shown in the extension popup so progress is preserved if you close and reopen it.</li>
+      <li><strong>Your preferences</strong> — which tab you last used, selected discount percentage, and whether you've seen the onboarding screen.</li>
+    </ul>
+    <p>All of this data can be cleared at any time by removing the extension from Chrome.</p>
+
+    <h2>3. What we do NOT do</h2>
+    <ul>
+      <li>We do not collect analytics or usage statistics.</li>
+      <li>We do not use cookies set by us.</li>
+      <li>We do not send any data to any server controlled by us.</li>
+      <li>We do not sell, share, or rent any data.</li>
+      <li>We do not store your Vinted password. Authentication works through your existing Vinted browser session — the same session cookies your browser already uses when you visit Vinted.</li>
+    </ul>
+
+    <h2>4. How the extension works</h2>
+    <p>Flick reads your Vinted session tokens from cookies and uses them to make API calls to Vinted's own servers (<code>www.vinted.co.uk</code> and equivalent regional domains) on your behalf. This is the same mechanism your browser uses when you browse Vinted normally. The extension acts as an interface — all data flows between your browser and Vinted, with nothing in between.</p>
+
+    <h2>5. Permissions we use and why</h2>
+    <ul>
+      <li><strong>tabs</strong> — to open a hidden Vinted tab temporarily so API calls can bypass Cloudflare protection, and to detect which Vinted regional domain you use.</li>
+      <li><strong>scripting</strong> — to run scripts inside a Vinted tab so API requests inherit your session cookies. Required for authentication.</li>
+      <li><strong>cookies</strong> — to read your Vinted domain from session cookies so we connect to the right regional site (vinted.co.uk, vinted.fr, etc.).</li>
+      <li><strong>storage</strong> — to save your preferences and run logs locally in your browser.</li>
+      <li><strong>webRequest</strong> — to detect the Vinted domain from network request headers.</li>
+      <li><strong>Host permissions (vinted.* domains)</strong> — to make API calls to Vinted's endpoints on your behalf and to read your wardrobe, notifications, and listing data.</li>
+    </ul>
+
+    <h2>6. Third-party services</h2>
+    <p>The extension communicates <strong>only with Vinted's own servers</strong> (*.vinted.co.uk, *.vinted.fr, and equivalent regional domains). No third-party analytics, advertising, or tracking services are used.</p>
+    <p>The extension loads the Inter font from Google Fonts when the popup is opened. This is a standard web font request and does not include any personal data. If you prefer to avoid this, you can use the extension offline and the UI will fall back to system fonts.</p>
+
+    <h2>7. Children's privacy</h2>
+    <p>Flick is not directed at children under 13. We do not knowingly collect data from children.</p>
+
+    <h2>8. Changes to this policy</h2>
+    <p>If we make material changes to this policy, we will update the "Last updated" date above and bump the extension version. Continued use of the extension after changes constitutes acceptance of the updated policy.</p>
+
+    <h2>9. Contact</h2>
+    <p>Questions about this privacy policy? Email us at <a href="mailto:support@getflick.app">support@getflick.app</a>.</p>
+
+    <hr>
+    <p style="font-size:12px;color:#9CA3AF;text-align:center;">Flick is an independent tool and is not affiliated with, endorsed by, or connected to Vinted UAB.</p>
+
+  </div>
+</body>
+</html>
